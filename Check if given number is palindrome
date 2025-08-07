@@ -1,0 +1,32 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner hi = new Scanner(System.in);
+        int number = hi.nextInt();
+       
+
+        
+        if (number < 100 || number > 999) {
+            System.out.println("Invalid Input");
+        } else {
+            
+            int hundreds = number / 100;
+            int tens = (number / 10) % 10;
+            int ones = number % 10;
+
+            
+            if (hundreds == ones) {
+                System.out.println("palindrome");
+            } else {
+                System.out.println("not palindrome");
+            }
+        }
+    }
+}
