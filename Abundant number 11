@@ -1,0 +1,35 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner hi = new Scanner(System.in);
+
+        
+        int x = hi.nextInt();
+        int y= 0;
+
+        
+        for (int i = 1; i <= x / 2; i++) {
+            if (x % i == 0) {
+                y += i;
+            }
+        }
+
+        
+        if (y > x) {
+            System.out.println("Abundant Number");
+        } else {
+            System.out.println("Not Abundant Number");
+        }
+
+       
+    }
+}
+
+    
