@@ -5,41 +5,45 @@ import java.math.*;
 import java.util.regex.*;
 
 
-public class Solution
-{
-    public static void main(String[] args)
-    {
+
+
+public class Solution {
+    public static void main(String[] args) {
         Scanner hi = new Scanner(System.in);
-        int input1 = hi.nextInt();
-        int input2 = hi.nextInt();
-       
-        if(hi.hasNextInt())  
-        {
-            int input3 = hi.nextInt();
-       
-            if( input3 >= 1)
-            {
-                if( input2 == 1)
-                {
-                    System.out.println( input1 + input3);  
+
+        int balance = hi.nextInt(); 
+        int option = hi.nextInt();   
+
+        switch (option) {
+            case 1:
+                
+                int depositAmount = hi.nextInt();
+                System.out.println(balance + depositAmount);
+                break;
+
+            case 2:
+               
+                int withdrawAmount = hi.nextInt();
+                if (withdrawAmount > balance) {
+                    System.out.println("Insufficient Balance");
+                } else {
+                    System.out.println(balance - withdrawAmount);
                 }
-                else if( input2 == 2)
-                {
-                    System.out.println("Insufficient Balance");  
-                }
-                else
-                {
-                    System.out.println("Invalid Input");
-                }
-            }
-            else
-            {
+                break;
+
+            default:
                 System.out.println("Invalid Input");
-            }
         }
-        else
-        {
-            System.out.println("Invalid Input");  
-        }
-    }  
+
+        hi.close();
+    }
 }
+
+        
+
+        
+    
+
+
+        
+   
