@@ -1,0 +1,27 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+import java.util.Scanner;
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner hi = new Scanner(System.in);
+        int x = hi.nextInt();
+
+        if (x < 100) {
+            System.out.println("Invalid Input");
+        } else {
+            int s = 0;
+            while (x > 0) {
+                s += x % 10;
+                x /= 10;
+            }
+            System.out.println("Sum of digit is " + s);
+        }
+        
+
+
+    }
+}
