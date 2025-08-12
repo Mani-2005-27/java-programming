@@ -1,0 +1,35 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+        
+    public static void main(String[] args) {
+        Scanner hi = new Scanner(System.in);
+        int a = hi.nextInt();
+
+        if (a < 10) {
+            System.out.println("STDOUT");
+            return;
+        }
+
+        int num = a;
+        while (num >= 100) {
+            num /= 10;
+        }
+
+        int f = num / 10;
+        int s = num % 10;
+
+        int swapped = s * 10 + f;
+        System.out.println(swapped);
+    }
+}
+
+    
+
+
+
+    
