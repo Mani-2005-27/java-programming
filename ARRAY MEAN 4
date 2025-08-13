@@ -1,0 +1,21 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+      Scanner hi=new Scanner(System.in);
+        int x=hi.nextInt();
+        int arr[]=new int[x];
+        float s=0;
+        for(int i=0;i<x;i++){
+            arr[i]=hi.nextInt();
+            s=s+arr[i];
+            
+        }
+        System.out.printf("Array Mean Value is %.2f",s/x);
+    }
+}
