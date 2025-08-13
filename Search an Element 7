@@ -1,0 +1,31 @@
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner ii = new Scanner(System.in);
+        int n = ii.nextInt();
+        int[] arr = new int[n];
+        for(int i=0; i<n; i++) {
+            arr[i] = ii.nextInt();
+        }
+        int a = ii.nextInt();
+        boolean d = false;
+        for(int i=0; i<n; i++) {
+            if(arr[i] == a) {
+                d = true;
+                break;
+            }
+        }
+        if(d) {
+            System.out.println(a + " is presented in an array.");
+        } else {
+            System.out.println(a+ " is not presented in an array.");
+        }
+    }
+}
