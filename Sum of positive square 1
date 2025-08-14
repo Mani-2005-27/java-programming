@@ -1,0 +1,30 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner hi = new Scanner(System.in);
+
+        int n = hi.nextInt();
+        int[] arr = new int[n];
+
+
+        for (int i = 0; i < n; i++) {
+            arr[i] = hi.nextInt();
+        }
+
+        int s = 0;
+      
+        for (int i = 0; i < n; i++) {
+            if (arr[i] > 0) {
+                s += arr[i] * arr[i];
+            }
+        }
+
+        System.out.println(s);
+    }
+}
